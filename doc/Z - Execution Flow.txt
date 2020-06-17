@@ -1,0 +1,32 @@
+Ex. Balaji Enterprises (Servewell CRM)
+=============================================
+# Structure
+> Customer Folder (ex. tserp.in/balaji)
+    : index.php
+    : setting folder (contains config file of db)
+> Product Folder (ex. tserp.in/servewell)
+   : contains centralized source code of product
+---------------------------------------------------------------------------------
+Flow
+---------------------------------------------------------------------------------
+# Run Customer Folder (ex. tserp.in/balaji)
+# in customer folder index file
+	: start session
+	: get working directory path and add it to session (for identify customer config file respectively in centralized src)
+	: redirect to centralized src
+# After redirect centralized src index file will run (ex. tserp.in/servewell)
+# Index file just redirect to login page (login/index.php)
+# Login file
+	: include (../setting/header.php)
+	: header.php
+	> set TS ROOT path
+	> include check file (this file is to check current working page is available in customer folder or not for customerwise changes stored in ts root)
+	> check current working directory : if not login folder then include root header else continue run login page code
+	: include ts class file and create class object
+	: class file
+	> set nessesary varibles and values like, custDir,Custid,DB connect
+	> check browser - restrict Internet Explorer
+	> check session - check session is active or not of not redirect to login page also check security options like ip restrct, time restrict, block access
+	> check AMC - check license date for current customer if not valid then stop execution and give msg regarding licese expiry.
+	: validate login username and password if valid then redirect to home or else give Invalid login msg
+# Home

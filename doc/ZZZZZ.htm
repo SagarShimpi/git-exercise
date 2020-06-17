@@ -1,0 +1,68 @@
+<script language="JavaScript" type="text/javascript" xml:space="preserve">
+//var frmvalidator  = new Validator("myform");
+//
+//frmvalidator.addValidation("FirstName","req","Please enter your First Name");
+//frmvalidator.addValidation("FirstName","maxlen=20",	"Max length for FirstName is 20");
+//frmvalidator.addValidation("FirstName","alpha","Alphabetic chars only");
+//
+//frmvalidator.addValidation("LastName","req","Please enter your Last Name");
+//frmvalidator.addValidation("LastName","maxlen=20","Max length is 20");
+//
+//frmvalidator.addValidation("Email","maxlen=50");
+//frmvalidator.addValidation("Email","req");
+//frmvalidator.addValidation("Email","email");
+//
+//frmvalidator.addValidation("Phone","maxlen=50");
+//frmvalidator.addValidation("Phone","numeric");
+//
+//frmvalidator.addValidation("Address","maxlen=50");
+//frmvalidator.addValidation("Country","dontselect=000");
+</script>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+------------------------------------------------------------<br />
+<br />
+1) requierd field<br />
+-&gt; frmvalidator.addValidation(&quot;FirstName&quot;,&quot;req&quot;,&quot;Please enter your First Name&quot;);<br />
+<br />
+<br />
+2) alphabet only (not even space and .)<br />
+-&gt; frmvalidator.addValidation(&quot;FirstName&quot;,&quot;alpha&quot;,&quot;Alphabetic chars only&quot;);<br />
+<br />
+alphabet only (allow space)<br />
+frmvalidator.addValidation(&quot;FirstName&quot;,&quot;alpha_s&quot;,&quot;Name can contain alphabetic chars only&quot;);
+alphabet, numeric n space only<br />
+frmvalidator.addValidation(&quot;Attachment&quot;,&quot;alphanumeric_space&quot;,&quot;only alphabet n number are allow&quot;);<br />
+<br />
+3) valid email<br />
+-&gt; frmvalidator.addValidation(&quot;Email&quot;,&quot;email&quot;);<br />
+<br />
+4) numeric<br />
+-&gt; frmvalidator.addValidation(&quot;Phone&quot;,&quot;numeric&quot;);<br />
+<br />
+5) select 1 option (dropdown)<br />
+-&gt; frmvalidator.addValidation(&quot;Country&quot;,&quot;dontselect=000&quot;);<br />
+<br />
+6) set max lenth<br />
+-&gt; frmvalidator.addValidation(&quot;FirstName&quot;,&quot;maxlen=20&quot;,	&quot;Max length for FirstName is 20&quot;);<br />
+<br />
+7) checkbox (select atleast..)<br />
+-&gt; chktestValidator.addValidation(&quot;features[]&quot;,&quot;selmin=2&quot;,&quot;Select at least two features&quot;);<br />
+<br />
+8) checkbox (select maximum..)<br />
+-&gt; chktestValidator.addValidation(&quot;features[]&quot;,&quot;selmax=3&quot;,&quot;Select maximum 3 features&quot;);<br />
+<br />
+9) radio button<br />
+-&gt; frmvalidator.addValidation(&quot;txt_gender&quot;,&quot;req&quot;,&quot;Please select Gender&quot;);<br />
+<br />
+10) file upload requierd<br />
+-&gt;  frmvalidator.addValidation(&quot;Attachment&quot;,&quot;file_extn=jpg;gif;png&quot;,&quot;Allowed files types are: jpg;gif;png&quot;);<br />
+<br />
+11) file upload type restiction (.jpg,.png)<br />
+-&gt;  frmvalidator.addValidation(&quot;Attachment&quot;,&quot;req_file&quot;,&quot;File upload is required&quot;);<br />
